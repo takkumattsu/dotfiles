@@ -8,7 +8,7 @@ install
 
 ```bash
 
-git clone https://github.com/TakkuMattsu/dotfiles.git $HOME/dotfiles
+ $ git clone https://github.com/TakkuMattsu/dotfiles.git $HOME/dotfiles
 
 ```
 
@@ -18,7 +18,7 @@ setup
 
 ```bash
 
-cd $HOME/dotfiles
-./setup.sh
+ $ cd $HOME/dotfiles
+ $ ./setup.sh
 
 ```

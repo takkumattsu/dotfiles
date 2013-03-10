@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 
 BUNDLE_DIR=$HOME/.vim/bundle

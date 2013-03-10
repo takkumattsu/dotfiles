@@ -14,9 +14,9 @@ syntax enable
 
 " terminal color
 if $TERM == "xterm"
-	set t_Co=256
+  set t_Co=256
 else
-	set t_Co=8
+  set t_Co=8
 endif
 
 " line number
@@ -80,25 +80,25 @@ match ZenkakuSpace /　/
 " GetBomb function
 " ----------------------------------------------
 :function! GetBomb()
-	:let var = &bomb
-	:if var == 0
-		return "NO"
-	:else
-		return "YES"
-	:endif
+  :let var = &bomb
+  :if var == 0
+    return "NO"
+  :else
+    return "YES"
+  :endif
 endfunction
 
 " GetFormat function
 " ----------------------------------------------
 :function! GetFormat()
-	:let var = &ff
-	:if var == "unix"
-		return "LF"
-	:elseif var == "dos"
-		return "CRLF"
-	:else
-		return "CR"
-	:endif
+  :let var = &ff
+  :if var == "unix"
+    return "LF"
+  :elseif var == "dos"
+    return "CRLF"
+  :else
+    return "CR"
+  :endif
 endfunction
 
 " }}}

@@ -8,7 +8,7 @@ install
 
 ```bash
 
- $ git clone https://github.com/TakkuMattsu/dotfiles.git ~/dotfiles
+ $ git clone git://github.com/TakkuMattsu/dotfiles.git ~/dotfiles
 
 ```
 

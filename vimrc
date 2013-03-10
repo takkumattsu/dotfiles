@@ -46,7 +46,7 @@ set laststatus=2
 
 " statusline format
 " filename [FENC="file encoding"] [FORMAT="LF/CRLF/CR"] [BOM="YES/NO"] [ENC="encording"] [LINE="current line number"/"line number]
-set statusline=%f\ [FENC=%{&fenc}]\ [FORMAT=%{GetFormat()}]\ [BOM=%{GetBomb()}]\ [ENC=%{&enc}]\ [LINE=%l/%L]
+"set statusline=%f\ [FENC=%{&fenc}]\ [FORMAT=%{GetFormat()}]\ [BOM=%{GetBomb()}]\ [ENC=%{&enc}]\ [LINE=%l/%L]
 
 " When joining lines in Japanese, don't enter a blank
 set formatoptions+=mM
@@ -62,11 +62,6 @@ set incsearch
 
 " enable wilemenu
 set wildmenu
-
-" colorscheme
-" mrkn256
-" <https://github.com/mrkn/mrkn256.vim>
-"colorscheme mrkn256
 
 " set Pmenu
 hi Pmenu ctermbg=darkcyan ctermfg=white
@@ -160,7 +155,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "  Recommended to install
 "  After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 " ----------------------------------------------
-"NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc'
 
 "  My Bundles here:
 "
@@ -170,6 +165,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'Lokaltog/vim-easymotion'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+NeoBundle 'mrkn/mrkn256.vim'
 
 "  vim-scripts repos
 " ----------------------------------------------
@@ -200,3 +196,14 @@ filetype plugin indent on     " Required!
 NeoBundleCheck
 
 " }}}
+
+
+" colorscheme {{{
+" ----------------------------------------------
+" mrkn256
+" <https://github.com/mrkn/mrkn256.vim>
+colorscheme mrkn256
+
+" }}}
+
+

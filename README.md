@@ -16,13 +16,14 @@ Install
 Setup
 --------
 
-Create a symbolic link as following:
-* .vim   -> vimfiles
-* .vimrc -> dotfiles/.vimrc
-
 ```bash
 
  $ cd ~/dotfiles
  $ ./setup.sh
 
 ```
+This script create a symbolic link as following:
+* .vim   -> vimfiles
+* .vimrc -> dotfiles/.vimrc
+
+

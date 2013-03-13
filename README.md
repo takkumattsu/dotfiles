@@ -3,7 +3,7 @@ dotfiles
 
 My personal configuration
 
-install
+Install
 --------
 
 ```bash
@@ -13,8 +13,12 @@ install
 ```
 
 
-setup
+Setup
 --------
+
+Create a symbolic link as following:
+ .vim   -> vimfiles
+ .vimrc -> dotfiles/.vimrc
 
 ```bash
 

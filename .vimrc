@@ -105,6 +105,8 @@ endfunction
 
 
 " template {{{
+" thanks
+" <http://blog.paz-para.com/?p=1733>
 " If you use temlate, create $HOME/.vim/template/skel.xx
 " ----------------------------------------------
 
@@ -122,7 +124,7 @@ let g:neocomplcache_enable_at_startup = 1
 
 
 "  binary edit {{{
-"  to refer 
+"  thanks
 "  <http://d.hatena.ne.jp/rdera/20081022/1224682665>
 " ----------------------------------------------
 
@@ -140,14 +142,13 @@ augroup END
 
 
 "  neobundle {{{
-"  refer to
 "  <https://github.com/Shougo/neobundle.vim>
 " ----------------------------------------------
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/vimfiles/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#rc(expand('~/vimfiles/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -206,4 +207,4 @@ colorscheme mrkn256
 
 " }}}
 
-
+" vim: foldmethod=marker :

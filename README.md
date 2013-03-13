@@ -17,8 +17,8 @@ Setup
 --------
 
 Create a symbolic link as following:
- .vim   -> vimfiles
- .vimrc -> dotfiles/.vimrc
+* .vim   -> vimfiles
+* .vimrc -> dotfiles/.vimrc
 
 ```bash
 

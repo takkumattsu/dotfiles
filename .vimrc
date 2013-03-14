@@ -13,11 +13,7 @@ set nocompatible
 syntax enable
 
 " terminal color
-if $TERM == "xterm"
-  set t_Co=256
-else
-  set t_Co=8
-endif
+set t_Co=256
 
 " line number
 "set number

@@ -194,6 +194,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'Lokaltog/vim-easymotion'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'mrkn/mrkn256.vim'
+NeoBundle 'Shougo/neosnippet.git'
 
 "  vim-scripts repos
 " -----------------------------------------------------------------------------

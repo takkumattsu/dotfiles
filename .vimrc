@@ -1,10 +1,10 @@
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 "  Last Change: 07 Mar 2013
 "  File: .vimrc
 "  Author: TakkuMattsu (takku.mattsu@gmail.com)
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 " Base settings {{{
 
 set nocompatible
@@ -46,7 +46,7 @@ set laststatus=2
 
 " statusline format
 " filename [FENC="file encoding"] [FORMAT="LF/CRLF/CR"] [BOM="YES/NO"] [ENC="encording"] [LINE="current line number"/"line number]
-"set statusline=%f\ [FENC=%{&fenc}]\ [FORMAT=%{GetFormat()}]\ [BOM=%{GetBomb()}]\ [ENC=%{&enc}]\ [LINE=%l/%L]
+set statusline=%f\ [FENC=%{&fenc}]\ [FORMAT=%{GetFormat()}]\ [BOM=%{GetBomb()}]\ [ENC=%{&enc}]\ [LINE=%l/%L]
 
 " When joining lines in Japanese, don't enter a blank
 set formatoptions+=mM
@@ -78,7 +78,7 @@ match ZenkakuSpace /　/
 " function
 
 " GetBomb function
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 :function! GetBomb()
   :let var = &bomb
   :if var == 0
@@ -89,7 +89,7 @@ match ZenkakuSpace /　/
 endfunction
 
 " GetFormat function
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 :function! GetFormat()
   :let var = &ff
   :if var == "unix"
@@ -108,7 +108,7 @@ endfunction
 " thanks
 " <http://blog.paz-para.com/?p=1733>
 " If you use temlate, create $HOME/.vim/template/skel.xx
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 
 "autocmd BufNewFile *.sh 0r $HOME/.vim/template/skel.sh
 "autocmd BufNewFile *.pl 0r $HOME/.vim/template/skel.pl
@@ -122,11 +122,42 @@ let g:neocomplcache_enable_at_startup = 1
 
 " }}}
 
+" neosnipet {{{
+" -----------------------------------------------------------------------------
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+" }}}
+
+" teraterm風こぴぺ {{{
+" thanks
+" <http://seekpoint.blogspot.jp/2013/01/teratermvim.html>
+" -----------------------------------------------------------------------------
+" GUI
+set guioptions+=a
+" CUI
+"set clipboard+=autoselect
+nnoremap <RightMouse> "*p
+inoremap <RightMouse> <C-r><C-o>*
+
+" }}}
+
 
 "  binary edit {{{
 "  thanks
 "  <http://d.hatena.ne.jp/rdera/20081022/1224682665>
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 
 augroup BinaryXXD
   autocmd!
@@ -143,7 +174,7 @@ augroup END
 
 "  neobundle {{{
 "  <https://github.com/Shougo/neobundle.vim>
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 if has('vim_starting')
   set runtimepath+=~/vimfiles/bundle/neobundle.vim/
 endif
@@ -155,35 +186,35 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "  Recommended to install
 "  After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-" ----------------------------------------------
-NeoBundle 'Shougo/vimproc'
+" -----------------------------------------------------------------------------
+"NeoBundle 'Shougo/vimproc'
 
 "  My Bundles here:
 "
 "  Note: You don't set neobundle setting in .gvimrc!
 "  Original repos on github
-"  ----------------------------------------------
+"  ----------------------------------------------------------------------------
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'Lokaltog/vim-easymotion'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'mrkn/mrkn256.vim'
 
 "  vim-scripts repos
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 "NeoBundle 'L9'
 "NeoBundle 'FuzzyFinder'
 "NeoBundle 'rails.vim'
 
 "  Non github repos
-"  ----------------------------------------------
+"  ----------------------------------------------------------------------------
 "NeoBundle 'git://git.wincent.com/command-t.git'
 
 "  Non git repos
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 NeoBundle 'http://github.com/Shougo/neocomplcache.git'
 
 " ...
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 
 
 filetype plugin indent on     " Required!
@@ -200,7 +231,7 @@ NeoBundleCheck
 
 
 " colorscheme {{{
-" ----------------------------------------------
+" -----------------------------------------------------------------------------
 " mrkn256
 " <https://github.com/mrkn/mrkn256.vim>
 colorscheme mrkn256

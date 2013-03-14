@@ -24,7 +24,7 @@ backup()
     mv $TARGET $TARGET.$BACKUP.bk
  
   else
-    # Is there any pattern?
+    # Target is not exist.
     echo
   fi
 

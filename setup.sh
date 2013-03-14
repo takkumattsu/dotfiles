@@ -4,6 +4,7 @@ VIM_RUNTIME_DIR=~/vimfiles
 BUNDLE_DIR=$VIM_RUNTIME_DIR/bundle
 VIMRC=~/.vimrc
 VIM_DIR=~/.vim
+SCREENRC=~/.screenrc
 
 #=====================================
 # backup function
@@ -34,7 +35,7 @@ backup()
 # main
 
 # set backup list 
-CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR"
+CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR $SCREENRC"
 
 # backup
 for target in ${CHECK_TARGET[@]}
@@ -50,6 +51,7 @@ git clone git://github.com/Shougo/neobundle.vim.git $BUNDLE_DIR/neobundle.vim
 # cretae symbolic link
 ln -s $PWD/.vimrc $VIMRC
 ln -s $VIM_RUNTIME_DIR ~/.vim
+ln -s $PWD/.screenrc $SCREENRC
 
 # init neobundle install
 vim +NeoBundleInstall +q

@@ -23,7 +23,8 @@ Setup
 
 ```
 This script create a symbolic link as following:
-* .vim   -> vimfiles
-* .vimrc -> dotfiles/.vimrc
+* .vim      -> vimfiles
+* .vimrc    -> dotfiles/.vimrc
+* .screenrc -> dotfiles/.screenrc
 
 

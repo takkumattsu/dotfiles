@@ -70,6 +70,11 @@ scriptencoding cp932
 highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
 
+if has('win32') || has('win64')
+  " Windowsの場合の処理
+  let $PATH = 'C:\Program Files (x86)\Git\cmd;'.$PATH  
+endif
+
 
 " function
 

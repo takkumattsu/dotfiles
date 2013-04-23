@@ -4,6 +4,17 @@ set VIM_RUNTIME_DIR=%USERPROFILE%\vimfiles
 set BUNDLE_DIR=%VIM_RUNTIME_DIR%\bundle
 set VIMRC=%USERPROFILE%\.vimrc
 
+:: date format is YYYYMMDD
+set date=%DATE:/=%
+
+:: tm format is HHMMSS
+set tm=%time:~0,8%
+set tm=%tm::=%
+set tm=%tm: =0%
+:: YYYYYMMDDHHMMSS
+set BACKUP=%date%%tm%
+
+:: Current Directory
 for /f "tokens=*" %%i in ('cd') do set CWD=%%i
 
 
@@ -31,7 +42,6 @@ mkdir "%BUNDLE_DIR%"
 :: "msysGit"
 :: <https://code.google.com/p/msysgit/downloads/list?q=net+installer>
 set GIT="YOUR GIT PATH"
-set GIT="C:\Program Files (x86)\Git\cmd\git.exe"
 %GIT% clone git://github.com/Shougo/neobundle.vim.git "%BUNDLE_DIR%\neobundle.vim"
 
 :: create symbolic link
@@ -51,20 +61,14 @@ exit 0
 setlocal
 
  echo backup for %1 
- :: date format is YYYYMMDD
- set date=%DATE:/=%
- 
- :: tm format is HHMMSS
- set tm=%time:~0,8%
- set tm=%tm::=%
- set tm=%tm: =0%
- :: YYYYYMMDDHHMMSS
- set BACKUP=%date%%tm%
 
  :: backup
  if exist %1 (
-  echo %1
-  xcopy /I /Y %1 %1_%BACKUP%
+  if exist %1\ (
+   xcopy /I /Y /E %1 %1_%BACKUP%
+  ) else (
+   echo F | xcopy /I /Y %1 %1_%BACKUP%
+  )
  )
 
  :: remove (first)

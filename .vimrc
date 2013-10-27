@@ -104,7 +104,6 @@ endfunction
 
 " }}}
 
-
 " template {{{
 " thanks
 " <http://blog.paz-para.com/?p=1733>
@@ -115,7 +114,6 @@ endfunction
 "autocmd BufNewFile *.pl 0r $HOME/.vim/template/skel.pl
 
 " }}}
-
 
 " neocomplcache {{{
 " ----------------------------------------------
@@ -225,7 +223,6 @@ inoremap <RightMouse> <C-r><C-o>*
 
 " }}}
 
-
 "  binary edit {{{
 "  thanks
 "  <http://d.hatena.ne.jp/rdera/20081022/1224682665>
@@ -242,7 +239,6 @@ augroup BinaryXXD
 augroup END
 
 " }}}
-
 
 "  neobundle {{{
 "  <https://github.com/Shougo/neobundle.vim>
@@ -271,6 +267,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'Shougo/neosnippet.git'
+NeoBundle 'kannokanno/previm.git'
+NeoBundle 'tyru/open-browser.vim.git'
 
 "  vim-scripts repos
 " -----------------------------------------------------------------------------
@@ -302,7 +300,6 @@ NeoBundleCheck
 
 " }}}
 
-
 " colorscheme {{{
 " -----------------------------------------------------------------------------
 " mrkn256
@@ -311,4 +308,9 @@ colorscheme mrkn256
 
 " }}}
 
-" vim: foldmethod=marker :
+" Filetype {{{
+" -----------------------------------------------------------------------------
+autocmd Filetype vim setlocal foldmethod=marker
+" }}}
+
+" vim: foldmethod=marker

@@ -28,3 +28,6 @@ This script create a symbolic link as following:
 * .screenrc -> dotfiles/.screenrc
 
 
+.bashrc is not install. if you need, manualy merge.
+
+

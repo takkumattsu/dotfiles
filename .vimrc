@@ -370,6 +370,7 @@ NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'kannokanno/previm.git'
 NeoBundle 'tyru/open-browser.vim.git'
+NeoBundle 'plasticboy/vim-markdown'
 
 "  vim-scripts repos
 " -----------------------------------------------------------------------------

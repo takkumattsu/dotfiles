@@ -5,6 +5,8 @@ BUNDLE_DIR=$VIM_RUNTIME_DIR/bundle
 VIMRC=~/.vimrc
 VIM_DIR=~/.vim
 SCREENRC=~/.screenrc
+TMUX_DIR=~/.tmux
+TMUX_CONF=~/.tmux.conf
 
 #=====================================
 # backup function
@@ -35,7 +37,7 @@ backup()
 # main
 
 # set backup list 
-CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR $SCREENRC"
+CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR $SCREENRC $TMUX_DIR $TMUX_CONF"
 
 # backup
 for target in ${CHECK_TARGET[@]}
@@ -48,10 +50,14 @@ mkdir -p $BUNDLE_DIR
 # install neobundle
 git clone git://github.com/Shougo/neobundle.vim.git $BUNDLE_DIR/neobundle.vim
 
+# install tmux-powerline
+git clone https://github.com/erikw/tmux-powerline.git $TMUX_DIR/tmux-powerline
+
 # cretae symbolic link
 ln -s $PWD/.vimrc $VIMRC
 ln -s $VIM_RUNTIME_DIR ~/.vim
 ln -s $PWD/.screenrc $SCREENRC
+ln -s $PWD/.tmux.conf $TMUX_CONF
 
 # init neobundle install
 vim +NeoBundleInstall +q

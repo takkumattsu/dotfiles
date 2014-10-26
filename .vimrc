@@ -1,5 +1,5 @@
 " -----------------------------------------------------------------------------
-"  Last Change: 07 Mar 2013
+"  Last Change: 27 Oct 2014
 "  File: .vimrc
 "  Author: TakkuMattsu (takku.mattsu@gmail.com)
 " -----------------------------------------------------------------------------
@@ -344,46 +344,32 @@ augroup END
 "  neobundle {{{
 "  <https://github.com/Shougo/neobundle.vim>
 " -----------------------------------------------------------------------------
+
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
-  set runtimepath+=~/vimfiles/bundle/neobundle.vim/
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/vimfiles/bundle/'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"  Recommended to install
-"  After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-" -----------------------------------------------------------------------------
-"NeoBundle 'Shougo/vimproc'
-
-"  My Bundles here:
-"
-"  Note: You don't set neobundle setting in .gvimrc!
-"  Original repos on github
-"  ----------------------------------------------------------------------------
-"NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'Lokaltog/vim-easymotion'
-"NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
 NeoBundle 'mrkn/mrkn256.vim'
 NeoBundle 'Shougo/neosnippet.git'
 NeoBundle 'kannokanno/previm.git'
 NeoBundle 'tyru/open-browser.vim.git'
 NeoBundle 'plasticboy/vim-markdown'
-
-"  vim-scripts repos
-" -----------------------------------------------------------------------------
-"NeoBundle 'L9'
-"NeoBundle 'FuzzyFinder'
-"NeoBundle 'rails.vim'
-
-"  Non github repos
-"  ----------------------------------------------------------------------------
-"NeoBundle 'git://git.wincent.com/command-t.git'
-
-"  Non git repos
-" -----------------------------------------------------------------------------
 
 " Neocomplete or Neocomplcache seetting
 " -----------------------------------------------------------------------------
@@ -396,18 +382,13 @@ else
    NeoBundle 'Shougo/neocomplcache.vim'
 endif
 
-" ...
-" -----------------------------------------------------------------------------
+call neobundle#end()
 
+" Required:
+filetype plugin indent on
 
-filetype plugin indent on     " Required!
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-
-" Installation check.
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
 NeoBundleCheck
 
 " }}}

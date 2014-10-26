@@ -29,3 +29,5 @@ This script create a symbolic link as following:
 > .bashrc is not install. if you need, manualy merge.
 
 tmux conf is only installed at setup.sh
+
+> dotfiles/tmux-opt copy manualy if you need.

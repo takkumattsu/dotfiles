@@ -26,9 +26,3 @@ This script create a symbolic link as following:
 * .tmux.conf    -> dotfiles/.tmux.conf
 * .bashrc       -> dotfiles/.bashrc
 * .bash_profile -> dotfiles/.bash_profile
-
-> .bashrc is not install. if you need, manualy merge.
-
-tmux conf is only installed at setup.sh
-
-> dotfiles/tmux-opt copy manualy if you need.

@@ -7,6 +7,8 @@ VIM_DIR=~/.vim
 SCREENRC=~/.screenrc
 TMUX_DIR=~/.tmux
 TMUX_CONF=~/.tmux.conf
+BASHRC=~/.bashrc
+BASH_PROFILE=~/.bash_profile
 
 #=====================================
 # backup function
@@ -37,7 +39,7 @@ backup()
 # main
 
 # set backup list 
-CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR $SCREENRC $TMUX_DIR $TMUX_CONF"
+CHECK_TARGET="$VIMRC $VIM_DIR $VIM_RUNTIME_DIR $SCREENRC $TMUX_DIR $TMUX_CONF $BASHRC $BASH_PROFILE"
 
 # backup
 for target in ${CHECK_TARGET[@]}
@@ -58,6 +60,8 @@ ln -s $PWD/.vimrc $VIMRC
 ln -s $VIM_RUNTIME_DIR ~/.vim
 ln -s $PWD/.screenrc $SCREENRC
 ln -s $PWD/.tmux.conf $TMUX_CONF
+ln -s $PWD/.bashrc $BASHRC
+ln -s $PWD/.bash_profile $BASH_PROFILE
 
 # init neobundle install
 vim +NeoBundleInstall +q

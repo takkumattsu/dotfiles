@@ -6,3 +6,5 @@ repo = 'mrkn/mrkn256.vim'
 repo = 'kannokanno/previm'
 [[plugins]]
 repo = 'tyru/open-browser.vim'
+[[plugins]]
+repo = 'Lokaltog/vim-powerline'

@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+[[plugins]]
+repo = 'mrkn/mrkn256.vim'
+[[plugins]]
+repo = 'kannokanno/previm'
+[[plugins]]
+repo = 'tyru/open-browser.vim'

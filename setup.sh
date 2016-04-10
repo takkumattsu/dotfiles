@@ -1,7 +1,6 @@
 #!/bin/sh
 
 VIMRC=~/.vimrc
-VIM_DIR=~/.vim
 SCREENRC=~/.screenrc
 TMUX_DIR=~/.tmux
 TMUX_CONF=~/.tmux.conf
@@ -11,6 +10,7 @@ CACHE_DIR=~/.cache
 VIM_DEIN_DIR=$CACHE_DIR/dein
 DEIN_TOML=~/.dein.toml
 DEIN_LAZY_TOML=~/.dein_lazy.toml
+TIGRC=~/.tigrc
 
 #=====================================
 # backup function
@@ -33,15 +33,13 @@ backup()
     # Target is not exist.
     echo
   fi
-
 }
-
 
 #=====================================
 # main
 
 # set backup list 
-CHECK_TARGET="$VIMRC $VIM_DIR $SCREENRC $TMUX_DIR $TMUX_CONF $BASHRC $BASH_PROFILE $CACHE_DIR $DEIN_TOML $DEIN_LAZY_TOML"
+CHECK_TARGET="$VIMRC $SCREENRC $TMUX_DIR $TMUX_CONF $BASHRC $BASH_PROFILE $CACHE_DIR $DEIN_TOML $DEIN_LAZY_TOML $TIGRC"
 
 # backup
 for target in ${CHECK_TARGET[@]}
@@ -63,3 +61,4 @@ ln -s $PWD/.bashrc $BASHRC
 ln -s $PWD/.bash_profile $BASH_PROFILE
 ln -s $PWD/.dein.toml $DEIN_TOML
 ln -s $PWD/.dein_lazy.toml $DEIN_LAZY_TOML
+ln -s $PWD/.tigrc $TIGRC

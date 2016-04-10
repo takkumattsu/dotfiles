@@ -31,6 +31,9 @@ set lcs=tab:>-,
 " encoding
 set encoding=utf-8
 
+" hilight
+nnoremap <Leader>c :<C-u>setlocal cursorline! cursorcolumn!<CR>
+
 " file encoding
 set fileencodings=ucs-bom,utf-8,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932
 

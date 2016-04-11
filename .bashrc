@@ -8,6 +8,9 @@ export PATH=/usr/local/bin:$PATH
 
 # alias
 alias ls='ls -G'
+# color
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # vim
 alias vi='vim'

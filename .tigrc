@@ -1,2 +1,9 @@
 # main viewの左端にコミットIDを表示する
 set main-view = id date author commit-title:graph=yes,refs=yes
+# color
+# date
+color date cyan default
+# graph-commit
+color graph-commit magenta default
+# author
+#color author red default

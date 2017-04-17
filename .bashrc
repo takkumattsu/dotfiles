@@ -7,7 +7,7 @@ fi
 export PATH=/usr/local/bin:$PATH
 
 # alias
-alias ls='ls -G'
+alias ls='ls --color'
 # color
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -24,3 +24,11 @@ export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\]@\h \[\033[32m\]\W\[\033[37m\
 
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+# core utils
+
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH

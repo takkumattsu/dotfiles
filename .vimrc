@@ -204,6 +204,7 @@ set guioptions+=a
 "set clipboard+=autoselect
 nnoremap <RightMouse> "*p
 inoremap <RightMouse> <C-r><C-o>*
+set clipboard=unnamed,autoselect
 
 " }}}
 

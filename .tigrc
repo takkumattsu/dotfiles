@@ -7,3 +7,7 @@ color date cyan default
 color graph-commit magenta default
 # author
 #color author red default
+
+# Branch View
+# 削除
+bind branch d !?git branch -d %(branch)

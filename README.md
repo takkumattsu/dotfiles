@@ -17,6 +17,7 @@ Setup
 ```bash
  $ cd ~/dotfiles
  $ ./setup.sh
+ $ brew bundle
 ```
 This script create a symbolic link as following:
 

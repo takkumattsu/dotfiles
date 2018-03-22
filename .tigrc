@@ -3,6 +3,8 @@ set main-view = id date author commit-title:graph=yes,refs=yes
 # color
 # date
 color date cyan default
+set main-view-date = custom
+set main-view-date-format = "%Y/%m/%d %H:%M"
 # graph-commit
 color graph-commit magenta default
 # author

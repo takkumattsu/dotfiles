@@ -14,3 +14,4 @@ brew 'vim', args: ['with-lua']
 cask 'licecap'
 cask 'sourcetree'
 cask 'visual-studio-code'
+cask 'google-chrome'

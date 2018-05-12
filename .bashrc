@@ -39,3 +39,10 @@ function share_history {
 PROMPT_COMMAND='share_history'
 shopt -u histappend
 export HISTSIZE=9999
+
+# nvm
+# nvm
+if [ -e $(brew --prefix nvm)/nvm.sh ]; then
+  export NVM_DIR="${HOME}/.nvm"
+  source $(brew --prefix nvm)/nvm.sh
+fi

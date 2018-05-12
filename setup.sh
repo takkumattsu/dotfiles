@@ -4,6 +4,7 @@ VIMRC=~/.vimrc
 SCREENRC=~/.screenrc
 TMUX_DIR=~/.tmux
 TMUX_CONF=~/.tmux.conf
+TMUX_RC=~/.tmux-powerlinerc
 BASHRC=~/.bashrc
 BASH_PROFILE=~/.bash_profile
 CACHE_DIR=~/.cache
@@ -62,3 +63,4 @@ ln -s $PWD/.bash_profile $BASH_PROFILE
 ln -s $PWD/.dein.toml $DEIN_TOML
 ln -s $PWD/.dein_lazy.toml $DEIN_LAZY_TOML
 ln -s $PWD/.tigrc $TIGRC
+ln -s $PWD/.tmux-powerlinerc $TMUX_RC

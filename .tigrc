@@ -9,7 +9,7 @@ set main-view-date-format = "%Y/%m/%d %H:%M"
 color graph-commit magenta default
 # author
 #color author red default
-
-# Branch View
 # 削除
-bind branch d !?git branch -d %(branch)
+bind generic <Ctrl-g> !?git branch -d %(branch)
+# マージdiffを表示する
+set diff-options = -m --first-parent

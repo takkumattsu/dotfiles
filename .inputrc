@@ -1,0 +1,9 @@
+$if Bash
+set completion-ignore-case on
+"\C-n": history-search-forward
+"\C-p": history-search-backward
+"\e[A": history-search-backward
+"\e[0A": history-search-backward
+"\e[B": history-search-forward
+"\e[0B": history-search-forward
+$endif

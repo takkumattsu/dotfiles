@@ -12,6 +12,7 @@ VIM_DEIN_DIR=$CACHE_DIR/dein
 DEIN_TOML=~/.dein.toml
 DEIN_LAZY_TOML=~/.dein_lazy.toml
 TIGRC=~/.tigrc
+INPUTRC=~/.inputrc
 
 #=====================================
 # backup function
@@ -40,7 +41,7 @@ backup()
 # main
 
 # set backup list 
-CHECK_TARGET="$VIMRC $SCREENRC $TMUX_DIR $TMUX_CONF $BASHRC $BASH_PROFILE $CACHE_DIR $DEIN_TOML $DEIN_LAZY_TOML $TIGRC"
+CHECK_TARGET="$VIMRC $SCREENRC $TMUX_DIR $TMUX_CONF $BASHRC $BASH_PROFILE $CACHE_DIR $DEIN_TOML $DEIN_LAZY_TOML $TIGRC $INPUTRC"
 
 # backup
 for target in ${CHECK_TARGET[@]}
@@ -64,3 +65,4 @@ ln -s $PWD/.dein.toml $DEIN_TOML
 ln -s $PWD/.dein_lazy.toml $DEIN_LAZY_TOML
 ln -s $PWD/.tigrc $TIGRC
 ln -s $PWD/.tmux-powerlinerc $TMUX_RC
+ln -s $PWD/.inputrc $INPUTRC

@@ -41,8 +41,13 @@ shopt -u histappend
 export HISTSIZE=9999
 
 # nvm
-# nvm
 if [ -e $(brew --prefix nvm)/nvm.sh ]; then
   export NVM_DIR="${HOME}/.nvm"
   source $(brew --prefix nvm)/nvm.sh
+fi
+
+# ctrl + s, ctrl + q
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
 fi

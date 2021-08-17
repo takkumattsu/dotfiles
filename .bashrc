@@ -1,7 +1,5 @@
 #for bash_completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  source $(brew --prefix)/etc/bash_completion
-fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # import /usr/local/bin
 export PATH=/usr/local/bin:$PATH
@@ -47,7 +45,20 @@ if [ -e $(brew --prefix nvm)/nvm.sh ]; then
 fi
 
 # ctrl + s, ctrl + q
-if [[ -t 0 ]]; then
-  stty stop undef
-  stty start undef
-fi
+#if [[ -t 0 ]]; then
+#  stty stop undef
+#  stty start undef
+#fi
+
+#tmux
+
+# flutter
+
+export PATH="$PATH:$HOME/workspace/flutter/bin"
+
+# Android
+
+export ANDROID_SDK_ROOT="~/Library/Android/sdk"
+
+# Java HOME
+export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'

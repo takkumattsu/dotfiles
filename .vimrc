@@ -72,7 +72,7 @@ hi PmenuThumb ctermfg=blue
 " Fullwidth space visible
 scriptencoding cp932
 highlight link ZenkakuSpace Error
-match ZenkakuSpace /　/
+"match ZenkakuSpace /　/
 
 if has('win32') || has('win64')
   " Windowsの場合の処理

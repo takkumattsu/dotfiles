@@ -1,3 +1,4 @@
+eval $(/opt/homebrew/bin/brew shellenv)
 #for bash_completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
@@ -14,8 +15,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias vi='vim'
 
 # PS1
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
+source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
+source /opt/homebrew/etc/bash_completion.d/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[37m\][\[\033[36m\]\u\[\033[37m\]@\h \[\033[32m\]\w\[\033[37m\]]\[\033[31m\]$(__git_ps1)\[\033[00m\]\n\$ '
 
@@ -24,7 +25,7 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 
 # core utils
 
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -62,3 +63,4 @@ export ANDROID_SDK_ROOT="~/Library/Android/sdk"
 
 # Java HOME
 export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
+
